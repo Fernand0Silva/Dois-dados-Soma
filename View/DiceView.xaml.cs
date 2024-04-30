@@ -1,5 +1,4 @@
-using MetalPerformanceShaders;
-using Microsoft.Maui.Storage;
+
 using MyticPartyTracker.Models;
 
 namespace MyticPartyTracker.View;
