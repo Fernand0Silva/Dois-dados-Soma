@@ -18,8 +18,12 @@ namespace MyticPartyTracker.ViewModels
         [ObservableProperty]
         public int numberSides;// numero de lados //se trocar o valor eu quero "observa"
 
+        [ObservableProperty]
+        public int quantity;
+
         // public int numberSides; 
-        public int quantity;//contidade
+        //contidade
+        [ObservableProperty]
         public int total;//soma
 
         public void Roll()
