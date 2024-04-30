@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyticPartyTracker.View.DiceView"
+             Title="DiceView">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label
+            Text=""
+             x:Name="LabResult"/>
+
+
+            <Picker x:Name="DicePicker"
+               SelectedIndexChanged="DicePicker_SelectedIndexChanged_1">
+
+                <Picker.Items>
+
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+
+                </Picker.Items>
+            </Picker>
+
+            <Button
+            x:Name="DiceBtn"
+            Text="Jogar"
+            Clicked="DiceBtn_Clicked"/>
+
+            <Picker x:Name="SidesPicker">
+
+
+                <Picker.Items>
+
+                    <x:String>7</x:String>
+                    <x:String>8</x:String>
+                    <x:String>9</x:String>
+                    <x:String>10</x:String>
+                    <x:String>11</x:String>
+                    <x:String>12</x:String>
+
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="AllDicesResultString"/>
+
+            <Label x:Name="ResultString"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
