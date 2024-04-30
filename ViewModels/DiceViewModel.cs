@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using MyticPartyTracker.Models;
 using MyticPartyTracker.ViewModels;
 
 namespace MyticPartyTracker.ViewModels
 {
-   public class DiceViewModel
+   public class DiceViewModel : ObservableObject//essa classe é observada// sempre colocar esse ObservableObject//"implementar"
     {
         public DiceViewModel() { 
         
         }
 
-        public int numberSides; // numero de lados
+        [ObservableProperty]
+        public int numberSides;// numero de lados //se trocar o valor eu quero "observa"
+
+        // public int numberSides; 
         public int quantity;//contidade
         public int total;//soma
 
