@@ -1,5 +1,6 @@
 
 using MyticPartyTracker.Models;
+using MyticPartyTracker.ViewModels;
 
 namespace MyticPartyTracker.View;
 
@@ -9,7 +10,8 @@ public partial class DiceView : ContentPage
 	{
 		InitializeComponent();
         DicePicker.SelectedIndex = 0;
-       // QuantityPicker.SelectedIndex = 0;
+        // QuantityPicker.SelectedIndex = 0;
+        BindingContext = new DiceViewModel();
 
     }
     private void DiceBtn_Clicked(object sender, EventArgs e)
@@ -38,6 +40,11 @@ public partial class DiceView : ContentPage
     private void DiceDoisBtn_Clicked(object sender, EventArgs e)
     {
        
+    }
+
+    private void resultString_Clicked(object sender, EventArgs e)
+    {
+
     }
 
     /* private void PicName_SelectedIndexChanged_2(object sender, EventArgs e)

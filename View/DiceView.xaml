@@ -4,7 +4,7 @@
              x:Class="MyticPartyTracker.View.DiceView"
              Title="DiceView">
     <ScrollView>
-    <VerticalStackLayout>
+    <VerticalStackLayout HorizontalOptions=" ">
         <Label
             Text=""
              x:Name="LabResult"/>
@@ -12,42 +12,50 @@
 
             <Picker x:Name="DicePicker"
                SelectedIndexChanged="DicePicker_SelectedIndexChanged_1">
-
-                <Picker.Items>
-
-                    <x:String>1</x:String>
+            <Picker.ItemsSource>
+                <x:String>1</x:String>
                     <x:String>2</x:String>
                     <x:String>3</x:String>
                     <x:String>4</x:String>
                     <x:String>5</x:String>
                     <x:String>6</x:String>
-
-                </Picker.Items>
+                </Picker.ItemsSource>
             </Picker>
 
-            <Button
-            x:Name="DiceBtn"
-            Text="Jogar"
-            Clicked="DiceBtn_Clicked"/>
-
-            <Picker x:Name="SidesPicker">
-
-
-                <Picker.Items>
-
+            <Label Text="Selecione a quantidade de lado dos dados"/>
+            <Picker x:Name="SiderPicker" SelectedItem="{Binding NumberSides}">
+                <Picker.ItemsSource>
+                   <x:Array Type="{x:Type x:Int32}">
                     <x:String>7</x:String>
                     <x:String>8</x:String>
                     <x:String>9</x:String>
                     <x:String>10</x:String>
                     <x:String>11</x:String>
                     <x:String>12</x:String>
-
-                </Picker.Items>
+                   </x:Array>
+                </Picker.ItemsSource>
             </Picker>
-            <Label x:Name="AllDicesResultString"/>
+                    
+            <Button x:Name="RollBtn"
+                Text=""
+                AutomationProperties.Name="Rodar os dados"
+                Command="{Binding RollCommand}"
+                FontSize="Large"/>
+        
+            <Label x:Name="resultString" 
+                   Text="{Binding Total}"
+                   FontSize="Large"/>
 
-            <Label x:Name="ResultString"/>
-
+            <CollectionView ItemSource="{Binding Rolls}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding}" />
+                            
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
     

@@ -12,30 +12,34 @@ using System.Windows.Markup;
 
 namespace MyticPartyTracker.ViewModels
 {
-   public class DiceViewModel : ObservableObject//essa classe é observada// sempre colocar esse ObservableObject//"implementar"
+   public partial class DiceViewModel : ObservableObject//essa classe é observada// sempre colocar esse ObservableObject//"implementar"
     {
-        public DiceViewModel() {
+        public DiceViewModel()
+        {
             RollCommand = new Command(Roll);
         }
+       
 
         [ObservableProperty]
         public int _numberSides;// numero de lados //se trocar o valor eu quero "observa"// public int numberSides; 
-
         [ObservableProperty]
         public int _quantity; //=_ para ser um number //contidade
-
-
         [ObservableProperty]
         public int _total;//soma
 
         
-        private ObservableCollection<int> rolls = new ObservableCollection<int>();//instancia uma lista nove
+        private ObservableCollection<int> rolls = new ObservableCollection<int>();//instancia uma lista nove// para observar ua lisar transfirmamos em um "ObservableCollection"
+        private int numberSides;
+        private int total;
+        private ObservableCollection<int> _rolls; new ObservableCollection<int>();
         public ObservableCollection<int> Rolls {
             get { return _rolls; }// retorna
-            set { _rolls = Value; }//adiciona
+            set { _rolls = value; }//adiciona
         }
 
-        public ICommandMapper RollCommand { get; }
+        public ICommand RollCommand { get; }
+        public int Total { get; private set; }
+        public int Quantity { get; private set; }
 
         public void Roll()
         {
