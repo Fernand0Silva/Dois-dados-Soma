@@ -42,6 +42,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MyticPartyTracker.Resource
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[D:/2DS_Luiz/PAM/Projeto_RPG/MyticPartyTracker/MyticPartyTracker/View/CharacterView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyticPartyTracker.View.CharacterView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CharacterView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CharacterView.xaml
+
 [D:/2DS_Luiz/PAM/Projeto_RPG/MyticPartyTracker/MyticPartyTracker/View/DiceView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyticPartyTracker.View.DiceView.xaml
